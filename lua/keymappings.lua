@@ -10,6 +10,7 @@ local opts = { noremap = true, silent = true }
 -- :nnoremap <F5> "=strftime("%c")<CR>P
 -- :inoremap <F5> <C-R>=strftime("%c")<CR>
 keymap("i", "<C-r>", '<C-R>=strftime("%Y-%m-%d")<CR>', opts)
+keymap("n", "<F3>", '<C-R>=strftime("%Y-%m-%d")<CR>', opts)
 
 -- 
 -- 2022.04.07: Exit insert mode in terminal - jk
@@ -41,11 +42,11 @@ keymap("n", "j", "gj", opts)
 keymap("n", "gj", "j", opts)
 -- Nohl
 keymap("n", "<C-b>", ":nohl<CR>", opts)
--- Save 
+-- Save
 -- keymap("n", "<C-s>", "<Esc>:update<CR>", opts)
 keymap("i", "<C-s>", "<Esc>:update<CR>", opts)
 keymap("n", "<Leader>w", ":w<CR>", opts)
--- Search 
+-- Search
 keymap("n", "<C-s>", "/\\v", {noremap = true})
 keymap("n", ",", "/", {noremap = true})
 -- Split
@@ -90,7 +91,6 @@ keymap("n", "<Leader>c", ":set cursorline! cursorcolumn!<CR>", opts)
 keymap("n", "<Leader>t", "<C-w>w<CR>", opts)
 --keymap("n", "<Tab>", "<C-w>w<CR>", opts)
 
- 
 -- vim.cmd([[
 --   " Ctrl+j and Ctrl+k as Esc
 --   " Ctrl-j is a little awkward unfortunately:

@@ -11,9 +11,12 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
+--lvim.colorscheme = "onedarker"
+--lvim.colorscheme = "base16-gruvbox-dark-soft"
+--lvim.colorscheme = "base16-onedark"
 lvim.colorscheme = "onedarker"
 -- to disable icons and use a minimalist setup, uncomment the following
--- lvim.use_icons = false
+lvim.use_icons = false
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -61,7 +64,11 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
+--lvim.builtin.nvimtree.show_icons.git = 0
+
+-- lvim.builtin.friendly_snippets = {
+--   active = false,
+-- }
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -145,7 +152,6 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
-  { "folke/tokyonight.nvim" },
   { 'justinmk/vim-sneak' },
   { 'tpope/vim-fugitive' },
   ---- Keys: [c , ]c to jump between changes
@@ -154,6 +160,28 @@ lvim.plugins = {
   { 'mhinz/vim-signify' },
   ---- Browse commits :GV, :GV!
   { 'junegunn/gv.vim' },
+  {'jremmen/vim-ripgrep'},
+
+  {'airblade/vim-rooter'},
+  { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end }, --, { 'do': { -> fzf#install() } 
+  --use 'junegunn/fzf'--, { 'do': { -> fzf#install() } }
+  {'junegunn/fzf.vim'},
+  {'rbgrouleff/bclose.vim'},
+  {'francoiscabrol/ranger.vim'}, -- If you use neovim, you have to add the dependency to the plugin bclose.vim
+
+  -- Colors
+  {'chriskempson/base16-vim'},
+  {"lunarvim/colorschemes"},
+  {"folke/tokyonight.nvim"},
+    -- Snippets
+  -- :UltiSnipsEdit
+  -- :Snippets - explore snippets
+  -- Ctrl j Jump to next
+  {'SirVer/ultisnips'},
+  { 'honza/vim-snippets' },
+
+  -- {'mfussenegger/nvim-dap'},
+  -- {'mfussenegger/nvim-dap-python'},
 
   -- {
   --   "folke/trouble.nvim",
