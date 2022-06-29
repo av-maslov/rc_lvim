@@ -163,7 +163,7 @@ lvim.plugins = {
   {'jremmen/vim-ripgrep'},
 
   {'airblade/vim-rooter'},
-  { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end }, --, { 'do': { -> fzf#install() } 
+  { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end },  -- 'junegunn/fzf.vim'
   --use 'junegunn/fzf'--, { 'do': { -> fzf#install() } }
   {'junegunn/fzf.vim'},
   {'rbgrouleff/bclose.vim'},
@@ -206,3 +206,4 @@ lvim.plugins = {
 
 require('basics')
 require('keymappings')
+lvim.lsp.document_highlight = true
