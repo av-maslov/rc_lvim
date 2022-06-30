@@ -152,28 +152,32 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
+
   { 'justinmk/vim-sneak' },
   { 'tpope/vim-fugitive' },
   ---- Keys: [c , ]c to jump between changes
   { 'airblade/vim-gitgutter' },
+
   ---- Show diffs
   { 'mhinz/vim-signify' },
+
   ---- Browse commits :GV, :GV!
   { 'junegunn/gv.vim' },
   {'jremmen/vim-ripgrep'},
 
   {'airblade/vim-rooter'},
-  { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end },  -- 'junegunn/fzf.vim'
-  --use 'junegunn/fzf'--, { 'do': { -> fzf#install() } }
+  { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end },
   {'junegunn/fzf.vim'},
+
   {'rbgrouleff/bclose.vim'},
   {'francoiscabrol/ranger.vim'}, -- If you use neovim, you have to add the dependency to the plugin bclose.vim
 
   -- Colors
   {'chriskempson/base16-vim'},
   {"lunarvim/colorschemes"},
-  {"folke/tokyonight.nvim"},
-    -- Snippets
+  --{"folke/tokyonight.nvim"},
+
+  -- Snippets
   -- :UltiSnipsEdit
   -- :Snippets - explore snippets
   -- Ctrl j Jump to next
@@ -206,4 +210,5 @@ lvim.plugins = {
 
 require('basics')
 require('keymappings')
+
 lvim.lsp.document_highlight = true
